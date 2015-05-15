@@ -1,0 +1,10 @@
+node_modules
+coverage
+.temp
+.idea
+.tmp
+*.swp
+*.swo
+*.log
+*.DS_Store
+.project
