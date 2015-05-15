@@ -1,0 +1,172 @@
+<section class="mainbar">
+  <section class="matter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 data-ng-bind="vm.title"></h1>
+
+          <accordion close-others="oneAtATime">
+            <accordion-group data-ng-repeat="project in vm.projects"  is-open="status.open">
+              <accordion-heading>
+                <span data-ng-bind="project.name"></span>
+                <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+              </accordion-heading>
+              <div>
+                <p data-ng-bind="project.description"></p>
+
+                <h3>Websites</h3>
+                <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th></th>
+                      <th>Username</th>
+                      <th>Password</th>
+                      <th>Note</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="info">
+                      <th colspan="5">Development</th>
+                    </tr>
+                    <tr data-ng-repeat="website in devWebsites = (project.websites | filter:{environment:'Development'})">
+                      <td>&nbsp;</td>
+                      <td><a href="{{website.url}}" target="_blank" data-ng-bind="website.url"></a></td>
+                      <td data-ng-bind="website.username"></td>
+                      <td data-ng-bind="website.password"></td>
+                      <td data-ng-bind="website.note"></td>
+                    </tr>
+                    <tr data-ng-hide="devWebsites.length">
+                      <td>&nbsp;</td>
+                      <td colspan="4">No Development websites</td>
+                    </tr>
+                    <tr class="success">
+                      <th colspan="5">QA</th>
+                    </tr>
+                    <tr data-ng-repeat="website in qaWebsites = (project.websites | filter:{environment:'QA'})">
+                      <td>&nbsp;</td>
+                      <td><a href="{{website.url}}" target="_blank" data-ng-bind="website.url"></a></td>
+                      <td data-ng-bind="website.username"></td>
+                      <td data-ng-bind="website.password"></td>
+                      <td data-ng-bind="website.note"></td>
+                    </tr>
+                    <tr data-ng-hide="qaWebsites.length">
+                      <td>&nbsp;</td>
+                      <td colspan="4">No QA websites</td>
+                    </tr>
+                    <tr class="warning">
+                      <th colspan="5">Stage</th>
+                    </tr>
+                    <tr data-ng-repeat="website in stgWebsites = (project.websites | filter:{environment:'Stage'})">
+                      <td>&nbsp;</td>
+                      <td><a href="{{website.url}}" target="_blank" data-ng-bind="website.url"></a></td>
+                      <td data-ng-bind="website.username"></td>
+                      <td data-ng-bind="website.password"></td>
+                      <td data-ng-bind="website.note"></td>
+                    </tr>
+                    <tr data-ng-hide="stgWebsites.length">
+                      <td>&nbsp;</td>
+                      <td colspan="4">No Stage websites</td>
+                    </tr>
+                    <tr class="danger">
+                      <th colspan="5">Production</th>
+                    </tr>
+                    <tr data-ng-repeat="website in prodWebsites = (project.websites | filter:{environment:'Production'})">
+                      <td>&nbsp;</td>
+                      <td><a href="{{website.url}}" target="_blank" data-ng-bind="website.url"></a></td>
+                      <td data-ng-bind="website.username"></td>
+                      <td data-ng-bind="website.password"></td>
+                      <td data-ng-bind="website.note"></td>
+                    </tr>
+                    <tr data-ng-hide="prodWebsites.length">
+                      <td>&nbsp;</td>
+                      <td colspan="4">No Production websites</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h3>Servers</h3>
+                <table class="table table-striped table-condensed">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th></th>
+                      <th>Type</th>
+                      <th>Username</th>
+                      <th>OS</th>
+                      <th>Note</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="info">
+                      <th colspan="6">Development</th>
+                    </tr>
+                    <tr data-ng-repeat="server in devServers = (project.servers | filter:{environment:'Development'})">
+                      <td>&nbsp;</td>
+                      <td data-ng-bind="server.name"></td>
+                      <td data-ng-bind="server.type"></td>
+                      <td data-ng-bind="server.username"></td>
+                      <td data-ng-bind="server.osVersion"></td>
+                      <td data-ng-bind="server.note"></td>
+                    </tr>
+                    <tr data-ng-hide="devServers.length">
+                      <td>&nbsp;</td>
+                      <td colspan="5">No Development servers</td>
+                    </tr>
+                    <tr class="success">
+                      <th colspan="6">QA</th>
+                    </tr>
+                    <tr data-ng-repeat="server in qaServers = (project.servers | filter:{environment:'QA'})">
+                      <td>&nbsp;</td>
+                      <td data-ng-bind="server.name"></td>
+                      <td data-ng-bind="server.type"></td>
+                      <td data-ng-bind="server.username"></td>
+                      <td data-ng-bind="server.osVersion"></td>
+                      <td data-ng-bind="server.note"></td>
+                    </tr>
+                    <tr data-ng-hide="qaServers.length">
+                      <td>&nbsp;</td>
+                      <td colspan="5">No QA servers</td>
+                    </tr>
+                    <tr class="warning">
+                      <th colspan="6">Stage</th>
+                    </tr>
+                    <tr data-ng-repeat="server in stgServers = (project.servers | filter:{environment:'Stage'})">
+                      <td>&nbsp;</td>
+                      <td data-ng-bind="server.name"></td>
+                      <td data-ng-bind="server.type"></td>
+                      <td data-ng-bind="server.username"></td>
+                      <td data-ng-bind="server.osVersion"></td>
+                      <td data-ng-bind="server.note"></td>
+                    </tr>
+                    <tr data-ng-hide="stgServers.length">
+                      <td>&nbsp;</td>
+                      <td colspan="5">No Stage servers</td>
+                    </tr>
+                    <tr class="danger">
+                      <th colspan="6">Production</th>
+                    </tr>
+                    <tr data-ng-repeat="server in prodServers = (project.servers | filter:{environment:'Production'})">
+                      <td>&nbsp;</td>
+                      <td data-ng-bind="server.name"></td>
+                      <td data-ng-bind="server.type"></td>
+                      <td data-ng-bind="server.username"></td>
+                      <td data-ng-bind="server.osVersion"></td>
+                      <td data-ng-bind="server.note"></td>
+                    </tr>
+                    <tr data-ng-hide="prodServers.length">
+                      <td>&nbsp;</td>
+                      <td colspan="5">No Production servers</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+            </accordion-group>
+          </accordion>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

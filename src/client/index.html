@@ -14,7 +14,6 @@
 
     <!-- build:css styles/lib.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
     <!-- endbower -->
@@ -25,6 +24,8 @@
     <link rel="stylesheet" href="/.tmp/styles.css">
     <!-- endinject -->
     <!-- endbuild -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"/>
+    
 </head>
 <body>
     <div>
@@ -46,12 +47,12 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="/bower_components/extras.angular.plus/ngplus-overlay.js"></script>
     <script src="/bower_components/moment/moment.js"></script>
     <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="/bower_components/toastr/toastr.js"></script>
     <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -65,6 +66,7 @@
     <script src="/src/client/app/core/core.module.js"></script>
     <script src="/src/client/app/dashboard/dashboard.module.js"></script>
     <script src="/src/client/app/layout/layout.module.js"></script>
+    <script src="/src/client/app/projects/projects.module.js"></script>
     <script src="/src/client/app/widgets/widgets.module.js"></script>
     <script src="/src/client/app/admin/admin.controller.js"></script>
     <script src="/src/client/app/admin/admin.route.js"></script>
@@ -82,6 +84,8 @@
     <script src="/src/client/app/layout/ht-top-nav.directive.js"></script>
     <script src="/src/client/app/layout/shell.controller.js"></script>
     <script src="/src/client/app/layout/sidebar.controller.js"></script>
+    <script src="/src/client/app/projects/projects.controller.js"></script>
+    <script src="/src/client/app/projects/projects.route.js"></script>
     <script src="/src/client/app/widgets/ht-img-person.directive.js"></script>
     <script src="/src/client/app/widgets/ht-widget-header.directive.js"></script>
     <!-- endinject -->
