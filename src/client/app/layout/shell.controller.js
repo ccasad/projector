@@ -11,11 +11,11 @@
         var vm = this;
         vm.busyMessage = 'Please wait ...';
         vm.isBusy = true;
-        $rootScope.showSplash = true;
+        $rootScope.showSplash = false;
         vm.navline = {
             title: config.appTitle,
-            text: 'Created by John Papa',
-            link: 'http://twitter.com/john_papa'
+            //text: 'Created by John Papa',
+            //link: 'http://twitter.com/john_papa'
         };
 
         activate();

@@ -5,8 +5,8 @@
         <div class="col-md-12">
           <h1 data-ng-bind="vm.title"></h1>
 
-          <accordion close-others="oneAtATime">
-            <accordion-group data-ng-repeat="project in vm.projects"  is-open="status.open">
+          <accordion close-others="true">
+            <accordion-group data-ng-repeat="project in vm.projects | orderBy:'name'"  is-open="status.open">
               <accordion-heading>
                 <span data-ng-bind="project.name"></span>
                 <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
@@ -14,7 +14,7 @@
               <div>
                 <p data-ng-bind="project.description"></p>
 
-                <h3>Websites</h3>
+                <h3 class="project-heading">Websites</h3>
                 <table class="table table-condensed">
                   <thead>
                     <tr>
@@ -85,7 +85,7 @@
                   </tbody>
                 </table>
 
-                <h3>Servers</h3>
+                <h3 class="project-heading">Servers</h3>
                 <table class="table table-striped table-condensed">
                   <thead>
                     <tr>

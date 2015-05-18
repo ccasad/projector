@@ -1,3 +1,5 @@
+/* jshint maxlen: 500 */
+
 module.exports = {
   people: getPeople(),
   projects: getProjects()
@@ -238,6 +240,192 @@ function getProjects() {
           password: 'hvcpapp', 
           note: 'note about production database server'
         }
+      ]
+    },
+    {
+      id: 2, 
+      name: 'MyCareerGateway', 
+      abbrev: 'MCG', 
+      logoUrl: 'https://www.mycareergateway.com/images/site_logos/mcg_logo_red.png',
+      description: 'A website to connect students and their career counselors to help them communicate more effectively.',
+      contactName: 'Chris Casad', 
+      contactEmail: 'chris.casad@xpandcorp.com',
+      websites: [
+        {
+          url: 'http://www-mcgp1-dev-portal.hvcp.local/', 
+          environment: 'Development',
+          username: 'chloe.herrera96@example.com', 
+          password: '12345', 
+          note: 'Student user'
+        },
+        {
+          url: 'http://nvcc-mcgp1-dev-portal.hvcp.local/', 
+          environment: 'Development',
+          username: 'amy.murphy41@example.com', 
+          password: '12345', 
+          note: 'Counselor user for NVCC'
+        },
+        {
+          url: 'http://gu-mcgp1-dev-portal.hvcp.local/', 
+          environment: 'Development',
+          username: 'erin.kelley78@example.com', 
+          password: '12345', 
+          note: 'Counselor user for GU'
+        },
+        {
+          url: 'http://chs-mcgp1-dev-portal.hvcp.local/', 
+          environment: 'Development',
+          username: 'alex.gibson11@example.com', 
+          password: '12345', 
+          note: 'Counselor user for CHS'
+        },
+        {
+          url: 'http://team-mcgp1-dev-portal.hvcp.local/', 
+          environment: 'Development',
+          username: 'phil.hopkins12@example.com', 
+          password: '12345', 
+          note: 'Friend user'
+        },
+        {
+          url: 'http://admin-mcgp1-dev-portal.hvcp.local/', 
+          environment: 'Development',
+          username: 'nvcc.admin@example.com', 
+          password: '12345', 
+          note: 'NVCC admin user'
+        },
+
+        {
+          url: 'http://www-stage.mycareergateway.com/', 
+          environment: 'Stage',
+          username: 'theo@example.com', 
+          password: '12345', 
+          note: 'Student user'
+        },
+        {
+          url: 'http://nvcc-stage.mycareergateway.com/', 
+          environment: 'Stage',
+          username: 'megan.rice80@example.com', 
+          password: '12345', 
+          note: 'Counselor user for NVCC'
+        },
+        {
+          url: 'http://gu-stage.mycareergateway.com/', 
+          environment: 'Stage',
+          username: 'sansa@example.com', 
+          password: '12345', 
+          note: 'Counselor user for GU'
+        },
+        {
+          url: 'http://chs-stage.mycareergateway.com/', 
+          environment: 'Stage',
+          username: 'grace.bowman52@example.com', 
+          password: '12345', 
+          note: 'Counselor user for CHS'
+        },
+        {
+          url: 'http://team-stage.mycareergateway.com/', 
+          environment: 'Stage',
+          username: 'judy.lane50@example.com', 
+          password: '12345', 
+          note: 'Angel user'
+        },
+        {
+          url: 'http://admin-stage.mycareergateway.com/', 
+          environment: 'Stage',
+          username: 'nvcc.admin@example.com', 
+          password: '12345', 
+          note: 'NVCC admin user'
+        },
+
+        {
+          url: 'http://www-stage.mycareergateway.com/', 
+          environment: 'Stage',
+          username: 'theo@example.com', 
+          password: '12345', 
+          note: 'Student user'
+        },
+        {
+          url: 'http://nvcc.mycareergateway.com/', 
+          environment: 'Production',
+          username: 'sansa@example.com', 
+          password: '12345', 
+          note: 'Counselor user for NVCC'
+        },
+        {
+          url: 'http://gu.mycareergateway.com/', 
+          environment: 'Production',
+          username: 'ashley.pierce92@example.com', 
+          password: '12345', 
+          note: 'Counselor user for GU'
+        },
+        {
+          url: 'http://chs.mycareergateway.com/', 
+          environment: 'Production',
+          username: 'grace.bowman52@example.com', 
+          password: '12345', 
+          note: 'Counselor user for CHS'
+        },
+        {
+          url: 'http://team.mycareergateway.com/', 
+          environment: 'Production',
+          username: 'judy.lane50@example.com', 
+          password: '12345', 
+          note: 'Angel user'
+        },
+        {
+          url: 'http://admin.mycareergateway.com/', 
+          environment: 'Production',
+          username: 'nvcc.admin@example.com', 
+          password: '12345', 
+          note: 'NVCC admin user'
+        },
+      ],
+      servers: [
+        {
+          name: 'mcgp1-dev-portal.hvcp.local', 
+          environment: 'Development',
+          type: 'Web/REST/Database', 
+          osVersion: 'CentOS release 6.5', 
+          username: 'mcgadmin', 
+          password: '', 
+          note: 'Note about dev web/rest/db server'
+        },
+        {
+          name: 'mcg7-stg-w78.mcg.local', 
+          environment: 'Stage',
+          type: 'Web/REST', 
+          osVersion: 'Ubuntu 14.04.2 LTS', 
+          username: 'mcgadmin', 
+          password: '', 
+          note: 'Note about stage web/rest server'
+        },
+        {
+          name: 'mcg7-stg-db1.mcg.local', 
+          environment: 'Stage',
+          type: 'Database', 
+          osVersion: '', 
+          username: 'mcg', 
+          password: '', 
+          note: 'Note about stage db server'
+        },
+        {
+          name: 'mcg7-pr-w71.mcg.local', 
+          environment: 'Production',
+          type: 'Web/REST', 
+          osVersion: 'Ubuntu 14.04.2 LTS', 
+          username: 'mcgadmin', 
+          password: '', 
+          note: 'Note about prod web/rest server'
+        },
+        {
+          name: 'mcg7-pr-db71.mcg.local', 
+          environment: 'Production',
+          type: 'Database', 
+          osVersion: '', 
+          username: 'mcg', 
+          password: '', 
+          note: 'Note about prod db server'
+        },
       ]
     },
   ];
