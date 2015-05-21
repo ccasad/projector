@@ -122,7 +122,7 @@ module.exports = function() {
         /**
          * Node settings
          */
-        nodeServer: './src/server/app.js',
+        nodeServer: './src/server/projector-api-app.js',
         defaultPort: '8001'
     };
 
