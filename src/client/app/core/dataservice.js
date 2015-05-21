@@ -5,10 +5,10 @@
     .module('app.core')
     .factory('dataservice', dataservice);
 
-  dataservice.$inject = ['$http', '$q', 'logger'];
+  dataservice.$inject = ['$http', '$q', 'logger', 'restapi'];
 
   /* @ngInject */
-  function dataservice($http, $q, logger) {
+  function dataservice($http, $q, logger, restapi) {
     var service = {
       getProjects: getProjects,
       getPeople: getPeople,
@@ -36,7 +36,7 @@
     }
 
     function getProjects() {
-      return $http.get('/api/projects')
+      return $http.get(restapi.server+'api/projects')
         .then(success)
         .catch(fail);
 

@@ -5,5 +5,8 @@
     angular
         .module('app.core')
         .constant('toastr', toastr)
-        .constant('moment', moment);
+        .constant('moment', moment)
+        .constant('restapi', {
+        	server: 'http://projector-vm-centos:8001/'
+        });
 })();
