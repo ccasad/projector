@@ -428,6 +428,75 @@ function getProjects() {
         },
       ]
     },
+
+    {
+      id: 3, 
+      name: 'Direct Outreach', 
+      abbrev: 'DO', 
+      logoUrl: 'http://directoutreach.mycareergateway.com/images/site_logos/logo_white.png',
+      description: 'Description about DO',
+      contactName: 'Chris Casad', 
+      contactEmail: 'chris.casad@xpandcorp.com',
+      websites: [
+        {
+          url: 'http://do-mcgp1-dev-portal.hvcp.local/', 
+          environment: 'Development',
+          username: 'sarah.holmes30@example.com', 
+          password: '12345', 
+          note: 'Career center rep user'
+        },
+        {
+          url: 'http://do-mcgp1-dev-portal.hvcp.local/', 
+          environment: 'Development',
+          username: 'brad.parker88@example.com', 
+          password: '12345', 
+          note: 'Employer rep user'
+        },
+        {
+          url: 'http://directoutreach.mycareergateway.com/', 
+          environment: 'Stage',
+          username: 'christopher.gibson87@example.com', 
+          password: '12345', 
+          note: 'Employer rep user'
+        },
+        {
+          url: 'http://directoutreach.mycareergateway.com/', 
+          environment: 'Stage',
+          username: 'keith.carlson49@example.com', 
+          password: '12345', 
+          note: 'Career center rep user'
+        },
+      ],
+      servers: [
+        {
+          name: 'mcgp1-dev-portal.hvcp.local', 
+          environment: 'Development',
+          type: 'Web/REST/Database', 
+          osVersion: 'CentOS release 6.5', 
+          username: 'mcgadmin', 
+          password: '', 
+          note: 'Note about dev web/rest/db server'
+        },
+        {
+          name: 'mcg7-stg-w78.mcg.local', 
+          environment: 'Stage',
+          type: 'Web/REST', 
+          osVersion: 'Ubuntu 14.04.2 LTS', 
+          username: 'mcgadmin', 
+          password: '', 
+          note: 'Note about stage web/rest server'
+        },
+        {
+          name: 'mcg7-stg-db1.mcg.local', 
+          environment: 'Stage',
+          type: 'Database', 
+          osVersion: '', 
+          username: 'mcg', 
+          password: '', 
+          note: 'Note about stage db server'
+        },
+      ]
+    }
   ];
 }
 

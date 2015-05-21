@@ -15,9 +15,9 @@ describe('projects routes', function () {
 
     bard.verifyNoOutstandingHttpRequests();
 
-    // it('should map state projects to url / ', function() {
-    //   expect($state.href('dashboard', {})).to.equal('/');
-    // });
+    it('should map state projects to url / ', function() {
+      expect($state.href('projects', {})).to.equal('/');
+    });
 
     it('should map /projects route to projects View template', function () {
       expect($state.get('projects').templateUrl).to.equal(view);
